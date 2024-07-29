@@ -1,0 +1,12 @@
+# Task 1: 
+## perform a SQL injection attack that logs in to the application as the administrator user.
+
+In url: `https://0a6800c5033f4d7081096cde00500076.web-security-academy.net/`
+- Click to `My Account'
+- Enter username `administrator'--`
+- Enter password with random string
+
+Explanation:
+- SELECT * FROM users WHERE username = 'administrator'--' AND password = ''
+- an attacker can log in as any user without the need for a password. They can do this using the SQL comment sequence -- to remove the password check from the WHERE clause of the query.
+- This query returns the user whose username is administrator and successfully logs the attacker in as that user.
